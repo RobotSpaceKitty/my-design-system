@@ -4,6 +4,7 @@ import { Select } from "./components";
 import { Checkbox } from "./components";
 import { RadioGroup } from "./components";
 import { Switch } from "./components";
+import { Textarea } from "./components";
 import { useState } from "react";
 
 import "./styles/index.scss";
@@ -11,6 +12,7 @@ import "./styles/index.scss";
 function App() {
   const [shipping, setShipping] = useState("standard");
   const [darkMode, setDarkMode] = useState(false);
+  const [bio, setBio] = useState("");
 
   return (
     <>
@@ -78,6 +80,16 @@ function App() {
           onChange={(e) => setDarkMode(e.target.checked)}
         />
         <p>Dark mode is {darkMode ? "enabled" : "disabled"}.</p>
+      </div>
+      <div className="p-6 max-w-md space-y-4">
+        <Textarea
+          label="Short Bio"
+          hint="Tell us a little about yourself (max 250 characters)"
+          maxLength={250}
+          value={bio}
+          onChange={(e) => setBio(e.target.value)}
+        />
+        <p className="text-sm text-gray-500">{bio.length}/250</p>
       </div>
     </>
   );
