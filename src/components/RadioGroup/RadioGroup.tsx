@@ -1,4 +1,4 @@
-import React, { forwardRef, useId } from "react";
+import { forwardRef, useId } from "react"; // Removed unused import of React
 import clsx from "clsx";
 
 export interface RadioOption {
