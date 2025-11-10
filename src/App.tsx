@@ -2,9 +2,13 @@ import { Button } from "./components";
 import { TextField } from "./components";
 import { Select } from "./components";
 import { Checkbox } from "./components";
+import { RadioGroup } from "./components";
+import { useState } from "react";
+
 import "./styles/index.scss";
 
 function App() {
+  const [shipping, setShipping] = useState("standard");
   return (
     <>
       <div style={{ padding: "2rem" }}>
@@ -19,7 +23,7 @@ function App() {
           label="Email"
           type="email"
           required
-          hint="We’ll send a confirmation."
+          hint="We'll send a confirmation."
         />
         <TextField
           label="Username"
@@ -39,17 +43,30 @@ function App() {
           hint="Choose your country for shipping."
         />
       </div>
-          <div className="p-6 space-y-4 max-w-md">
-      <Checkbox
-        label="Subscribe to newsletter"
-        hint="You can unsubscribe anytime."
-      />
-      <Checkbox
-        label="I agree to the terms"
-        required
-        error="You must agree to continue."
-      />
-    </div>
+      <div className="p-6 space-y-4 max-w-md">
+        <Checkbox
+          label="Subscribe to newsletter"
+          hint="You can unsubscribe anytime."
+        />
+        <Checkbox
+          label="I agree to the terms"
+          required
+          error="You must agree to continue."
+        />
+      </div>
+      <div className="p-6 max-w-md space-y-4">
+        <RadioGroup
+          label="Delivery Method"
+          value={shipping}
+          onChange={setShipping}
+          options={[
+            { value: "standard", label: "Standard (Free)" },
+            { value: "express", label: "Express ($9.99)" },
+            { value: "overnight", label: "Overnight ($19.99)" },
+          ]}
+          hint="Choose how you'd like your package delivered."
+        />
+      </div>
     </>
   );
 }

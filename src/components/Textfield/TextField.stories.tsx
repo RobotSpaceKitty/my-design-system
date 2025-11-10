@@ -22,7 +22,7 @@ export const Default: Story = {};
 
 export const WithHint: Story = {
   args: {
-    hint: "We’ll never share your email.",
+    hint: "We'll never share your email.",
   },
 };
 
