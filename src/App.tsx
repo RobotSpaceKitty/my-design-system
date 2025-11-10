@@ -1,7 +1,7 @@
 import { Button } from "./components";
 import { TextField } from "./components";
 import { Select } from "./components";
-
+import { Checkbox } from "./components";
 import "./styles/index.scss";
 
 function App() {
@@ -39,6 +39,17 @@ function App() {
           hint="Choose your country for shipping."
         />
       </div>
+          <div className="p-6 space-y-4 max-w-md">
+      <Checkbox
+        label="Subscribe to newsletter"
+        hint="You can unsubscribe anytime."
+      />
+      <Checkbox
+        label="I agree to the terms"
+        required
+        error="You must agree to continue."
+      />
+    </div>
     </>
   );
 }
