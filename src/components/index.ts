@@ -5,3 +5,4 @@ export * from "./Checkbox";
 export * from "./RadioGroup";
 export * from "./Switch";
 export * from "./Textarea";
+export * from "./Slider";

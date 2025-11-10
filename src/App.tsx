@@ -5,6 +5,7 @@ import { Checkbox } from "./components";
 import { RadioGroup } from "./components";
 import { Switch } from "./components";
 import { Textarea } from "./components";
+import { Slider } from "./components";
 import { useState } from "react";
 
 import "./styles/index.scss";
@@ -13,7 +14,7 @@ function App() {
   const [shipping, setShipping] = useState("standard");
   const [darkMode, setDarkMode] = useState(false);
   const [bio, setBio] = useState("");
-
+  const [brightness, setBrightness] = useState(50);
   return (
     <>
       <div style={{ padding: "2rem" }}>
@@ -90,6 +91,25 @@ function App() {
           onChange={(e) => setBio(e.target.value)}
         />
         <p className="text-sm text-gray-500">{bio.length}/250</p>
+      </div>
+      <div className="p-6 max-w-md space-y-4">
+        <Slider
+          label="Brightness"
+          min={0}
+          max={100}
+          value={brightness}
+          onChange={(e) => setBrightness(Number(e.target.value))}
+          tone={
+            brightness > 70 ? "success" : brightness < 20 ? "error" : "default"
+          }
+          hint={
+            brightness > 70
+              ? "Looks good."
+              : brightness < 20
+              ? "Too low!"
+              : "Adjust to your preference."
+          }
+        />
       </div>
     </>
   );

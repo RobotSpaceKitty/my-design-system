@@ -9,7 +9,7 @@ export interface TextFieldProps
   extends Omit<InputHTMLAttributes<HTMLInputElement>, "size"> {
   label: string;
   size?: TextFieldSize;
-  tone?: TextFieldTone;
+  tone?: "default" | "error" | "success";
   hint?: string; // helper/assistive text
   error?: string; // validation message; sets tone="error"
   requiredMark?: boolean; // show "*" after label when required
@@ -97,7 +97,17 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
             {error}
           </p>
         ) : hint ? (
-          <p id={hintId} className="text-sm text-gray-500">
+          <p
+            id={hintId}
+            className={clsx(
+              "text-sm",
+              tone === "success"
+                ? "text-green-600"
+                : tone === "error"
+                ? "text-red-600"
+                : "text-gray-500"
+            )}
+          >
             {hint}
           </p>
         ) : null}

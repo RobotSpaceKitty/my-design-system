@@ -9,6 +9,7 @@ const meta: Meta<typeof TextField> = {
     placeholder: "you@example.com",
     size: "md",
     fullWidth: true,
+    tone: "default",
   },
   parameters: {
     controls: { expanded: true },
