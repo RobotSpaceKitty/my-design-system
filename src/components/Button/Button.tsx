@@ -1,11 +1,12 @@
 import React from "react";
-import styles from "./button.module.scss";
 import clsx from "clsx";
+import styles from "./Button.module.scss";
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: "primary" | "secondary";
   size?: "sm" | "md" | "lg";
   disabled?: boolean;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>;
   children: React.ReactNode;
 }
 
@@ -13,14 +14,14 @@ export const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   size = "md",
   disabled,
+  onClick,
   children,
-}) => {
-  return (
-    <button
-      className={clsx(styles.button, styles[variant], styles[size])}
-      disabled={disabled}
-    >
-      {children}
-    </button>
-  );
-};
+}) => (
+  <button
+    className={clsx(styles.button, styles[variant], styles[size])}
+    disabled={disabled}
+    onClick={onClick}
+  >
+    {children}
+  </button>
+);
