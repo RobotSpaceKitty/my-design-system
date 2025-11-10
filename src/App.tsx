@@ -3,12 +3,15 @@ import { TextField } from "./components";
 import { Select } from "./components";
 import { Checkbox } from "./components";
 import { RadioGroup } from "./components";
+import { Switch } from "./components";
 import { useState } from "react";
 
 import "./styles/index.scss";
 
 function App() {
   const [shipping, setShipping] = useState("standard");
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
       <div style={{ padding: "2rem" }}>
@@ -66,6 +69,15 @@ function App() {
           ]}
           hint="Choose how you'd like your package delivered."
         />
+      </div>
+      <div className="p-6 space-y-4 max-w-md">
+        <Switch
+          label="Dark Mode"
+          hint="Toggle theme preference"
+          checked={darkMode}
+          onChange={(e) => setDarkMode(e.target.checked)}
+        />
+        <p>Dark mode is {darkMode ? "enabled" : "disabled"}.</p>
       </div>
     </>
   );
