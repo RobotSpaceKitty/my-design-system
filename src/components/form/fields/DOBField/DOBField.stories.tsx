@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { DOBField } from "./DOBField";
 
 const meta: Meta<typeof DOBField> = {
-  title: "DesignSystem/Forms/DOBField",
+  title: "DesignSystem/Form/Fields/DOBField",
   component: DOBField,
   args: {
     placeholder: "MM/DD/YYYY",

@@ -3,7 +3,7 @@ import { Switch } from "./Switch";
 import { useState } from "react";
 
 const meta: Meta<typeof Switch> = {
-  title: "DesignSystem/Forms/Switch",
+  title: "DesignSystem/Form/Base/Switch",
   component: Switch,
   args: {
     label: "Enable notifications",

@@ -1,6 +1,6 @@
 import { TextField, type TextFieldProps } from "../../base";
 
-export const CCField = (props: Omit<TextFieldProps, "label">) => {
+export const CCNumberField = (props: Omit<TextFieldProps, "label">) => {
   return (
     <TextField
       label="Credit Card Number"

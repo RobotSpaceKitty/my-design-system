@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { EmailField } from "./EmailField";
 
 const meta: Meta<typeof EmailField> = {
-  title: "DesignSystem/Forms/EmailField",
+  title: "DesignSystem/Form/Fields/EmailField",
   component: EmailField,
 };
 export default meta;

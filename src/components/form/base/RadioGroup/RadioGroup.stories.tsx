@@ -4,7 +4,7 @@ import { RadioGroup } from "./RadioGroup";
 import { useState } from "react";
 
 const meta: Meta<typeof RadioGroup> = {
-  title: "DesignSystem/Forms/RadioGroup",
+  title: "DesignSystem/Form/Base/RadioGroup",
   component: RadioGroup,
   args: {
     label: "Delivery Method",

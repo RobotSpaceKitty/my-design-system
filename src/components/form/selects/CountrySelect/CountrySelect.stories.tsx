@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { CountrySelect } from "./CountrySelect";
 
 const meta: Meta<typeof CountrySelect> = {
-  title: "DesignSystem/Forms/CountrySelect",
+  title: "DesignSystem/Form/Selects/CountrySelect",
   component: CountrySelect,
   args: {
     fullWidth: true,

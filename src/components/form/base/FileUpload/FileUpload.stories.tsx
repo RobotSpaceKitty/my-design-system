@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { FileUpload } from "./FileUpload";
 
 const meta: Meta<typeof FileUpload> = {
-  title: "DesignSystem/Forms/FileUpload",
+  title: "DesignSystem/Form/Base/FileUpload",
   component: FileUpload,
   args: {
     label: "Upload File",

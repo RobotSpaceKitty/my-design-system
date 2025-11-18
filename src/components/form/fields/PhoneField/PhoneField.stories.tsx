@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { PhoneField } from "./PhoneField";
 
 const meta: Meta<typeof PhoneField> = {
-  title: "DesignSystem/Forms/PhoneField",
+  title: "DesignSystem/Form/Fields/PhoneField",
   component: PhoneField,
 };
 export default meta;

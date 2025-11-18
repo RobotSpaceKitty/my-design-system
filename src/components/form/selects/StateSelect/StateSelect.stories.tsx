@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { StateSelect } from "./StateSelect";
 
 const meta: Meta<typeof StateSelect> = {
-  title: "DesignSystem/Forms/StateSelect",
+  title: "DesignSystem/Form/Selects/StateSelect",
   component: StateSelect,
   args: {
     fullWidth: true,

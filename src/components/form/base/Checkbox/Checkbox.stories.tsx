@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from "@storybook/react";
 import {Checkbox} from "./Checkbox";
 
 const meta: Meta<typeof Checkbox> = {
-    title: "DesignSystem/Forms/Checkbox",
+    title: "DesignSystem/Form/Base/Checkbox",
     component: Checkbox,
     args: {
         label: "I agree to the terms",

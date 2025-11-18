@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { PasswordField } from "./PasswordField";
 
 const meta: Meta<typeof PasswordField> = {
-  title: "DesignSystem/Forms/PasswordField",
+  title: "DesignSystem/Form/Fields/PasswordField",
   component: PasswordField,
   args: {
     placeholder: "Enter your password",

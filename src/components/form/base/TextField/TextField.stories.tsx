@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { TextField } from "./TextField";
 
 const meta: Meta<typeof TextField> = {
-  title: "DesignSystem/Forms/TextField",
+  title: "DesignSystem/Form/Base/TextField",
   component: TextField,
   args: {
-    label: "Email",
-    placeholder: "you@example.com",
+    label: "Text Field",
+    placeholder: "Enter text...",
     size: "md",
     fullWidth: true,
     tone: "default",
@@ -23,7 +23,7 @@ export const Default: Story = {};
 
 export const WithHint: Story = {
   args: {
-    hint: "We'll never share your email.",
+    hint: "Helpful description for this field.",
   },
 };
 
@@ -36,7 +36,7 @@ export const Required: Story = {
 export const Error: Story = {
   args: {
     required: true,
-    error: "Email is required.",
+    error: "This field is required.",
   },
 };
 
@@ -44,7 +44,7 @@ export const SuccessTone: Story = {
   args: {
     tone: "success",
     hint: "Looks good.",
-    defaultValue: "will@example.com",
+    defaultValue: "Sample value",
   },
 };
 

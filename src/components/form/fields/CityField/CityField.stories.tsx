@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { CityField } from "./CityField";
 
 const meta: Meta<typeof CityField> = {
-  title: "DesignSystem/Forms/CityField",
+  title: "DesignSystem/Form/Fields/CityField",
   component: CityField,
   args: {
     placeholder: "San Francisco",

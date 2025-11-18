@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { URLField } from "./URLField";
 
 const meta: Meta<typeof URLField> = {
-  title: "DesignSystem/Forms/URLField",
+  title: "DesignSystem/Form/Fields/URLField",
   component: URLField,
 };
 export default meta;

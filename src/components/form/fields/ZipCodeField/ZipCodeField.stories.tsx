@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { ZipCodeField } from "./ZipCodeField";
 
 const meta: Meta<typeof ZipCodeField> = {
-  title: "DesignSystem/Forms/ZipCodeField",
+  title: "DesignSystem/Form/Fields/ZipCodeField",
   component: ZipCodeField,
 };
 export default meta;

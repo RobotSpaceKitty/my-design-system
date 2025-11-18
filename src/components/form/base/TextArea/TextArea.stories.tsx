@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Textarea } from "./TextArea";
+import { TextArea } from "./TextArea";
 import { useState } from "react";
 
-const meta: Meta<typeof Textarea> = {
-  title: "DesignSystem/Forms/Textarea",
-  component: Textarea,
+const meta: Meta<typeof TextArea> = {
+  title: "DesignSystem/Form/Base/TextArea",
+  component: TextArea,
   args: {
     label: "Message",
     placeholder: "Type your message here...",
@@ -14,13 +14,13 @@ const meta: Meta<typeof Textarea> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof Textarea>;
+type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
   render: (args) => {
     const [value, setValue] = useState("");
     return (
-      <Textarea
+      <TextArea
         {...args}
         value={value}
         onChange={(e) => setValue(e.target.value)}
@@ -33,7 +33,7 @@ export const WithError: Story = {
   render: (args) => {
     const [value, setValue] = useState("");
     return (
-      <Textarea
+      <TextArea
         {...args}
         value={value}
         onChange={(e) => setValue(e.target.value)}

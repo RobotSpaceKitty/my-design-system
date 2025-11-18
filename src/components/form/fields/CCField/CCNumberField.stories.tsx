@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { CreditCardNumberField } from "./CCNumberField";
+import { CCNumberField } from "./CCNumberField";
 
-const meta: Meta<typeof CreditCardNumberField> = {
-  title: "DesignSystem/Forms/CreditCardNumberField",
-  component: CreditCardNumberField,
+const meta: Meta<typeof CCNumberField> = {
+  title: "DesignSystem/Form/Fields/CCNumberField",
+  component: CCNumberField,
 };
 export default meta;
 
-type Story = StoryObj<typeof CreditCardNumberField>;
+type Story = StoryObj<typeof CCNumberField>;
 
 export const Default: Story = {};
 export const ErrorState: Story = { args: { error: "Invalid card number" } };

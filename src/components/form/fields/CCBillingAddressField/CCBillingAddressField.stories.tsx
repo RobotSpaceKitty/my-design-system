@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { BillingAddressField } from "./CCBillingAddressField";
+import { CCBillingAddressField } from "./CCBillingAddressField";
 
-const meta: Meta<typeof BillingAddressField> = {
-  title: "DesignSystem/Forms/BillingAddressField",
-  component: BillingAddressField,
+const meta: Meta<typeof CCBillingAddressField> = {
+  title: "DesignSystem/Form/Fields/BillingAddressField",
+  component: CCBillingAddressField,
 };
 export default meta;
 
-type Story = StoryObj<typeof BillingAddressField>;
+type Story = StoryObj<typeof CCBillingAddressField>;
 
 export const Default: Story = {};
 export const ErrorState: Story = { args: { error: "Address required" } };

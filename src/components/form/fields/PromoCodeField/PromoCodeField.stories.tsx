@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { PromoCodeField } from "./PromoCodeField";
 
 const meta: Meta<typeof PromoCodeField> = {
-  title: "DesignSystem/Forms/PromoCodeField",
+  title: "DesignSystem/Form/Fields/PromoCodeField",
   component: PromoCodeField,
 };
 export default meta;
