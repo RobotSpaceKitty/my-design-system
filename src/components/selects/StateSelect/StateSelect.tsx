@@ -1,4 +1,4 @@
-import { Select, type SelectProps } from "../base/Select";
+import { Select, type SelectProps } from "../../base/";
 
 const STATE_OPTIONS = [
   { value: "", label: "Select a state" },

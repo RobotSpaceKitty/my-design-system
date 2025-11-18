@@ -1,4 +1,4 @@
-import { TextField, type TextFieldProps } from "../base/TextField";
+import { TextField, type TextFieldProps } from "../../base/";
 
 export const AddressField = (props: Omit<TextFieldProps, "label">) => (
   <TextField

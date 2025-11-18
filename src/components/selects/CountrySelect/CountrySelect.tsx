@@ -1,4 +1,4 @@
-import { Select, type SelectProps } from "../base/Select";
+import { Select, type SelectProps } from "../../base";
 
 const COUNTRY_OPTIONS = [
   { value: "", label: "Select your country" },
