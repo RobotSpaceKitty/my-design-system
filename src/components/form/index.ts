@@ -23,6 +23,6 @@ export { PromoCodeField } from "./fields/PromoCodeField";
 export { URLField } from "./fields/URLField";
 export { ZipCodeField } from "./fields/ZipCodeField";
 
-// Specialized selects
+// Composite select components
 export { CountrySelect } from "./selects/CountrySelect";
 export { StateSelect } from "./selects/StateSelect";
