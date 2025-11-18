@@ -8,37 +8,25 @@ const meta: Meta<typeof Button> = {
     children: "Click Me",
     size: "md",
     variant: "primary",
+    fullWidth: false,
+    disabled: false,
   },
   parameters: {
     controls: { expanded: true },
   },
+  argTypes: {
+    children: { control: "text" },
+    variant: {
+      control: "radio",
+      options: ["primary", "secondary", "success", "danger"],
+    },
+    size: { control: "radio", options: ["sm", "md", "lg"] },
+    fullWidth: { control: "boolean" },
+    disabled: { control: "boolean" },
+  },
 };
-export default meta;
 
+export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
-  args: { variant: "primary" },
-};
-
-export const Secondary: Story = {
-  args: { variant: "secondary" },
-};
-
-export const Success: Story = {
-  args: { variant: "success", children: "Looks good!" },
-};
-
-export const Danger: Story = {
-  args: { variant: "danger", children: "Delete" },
-};
-
-export const Sizes: Story = {
-  render: (args) => (
-    <div className="flex gap-3">
-      <Button {...args} size="sm">Small</Button>
-      <Button {...args} size="md">Medium</Button>
-      <Button {...args} size="lg">Large</Button>
-    </div>
-  ),
-};
+export const Default: Story = {};

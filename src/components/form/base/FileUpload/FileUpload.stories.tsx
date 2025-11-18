@@ -11,29 +11,18 @@ const meta: Meta<typeof FileUpload> = {
   parameters: {
     controls: { expanded: true },
   },
+  argTypes: {
+    label: { control: "text" },
+    accept: { control: "text" },
+    required: { control: "boolean" },
+    requiredMark: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    hint: { control: "text" },
+    error: { control: "text" },
+  },
 };
 
 export default meta;
-
 type Story = StoryObj<typeof FileUpload>;
 
 export const Default: Story = {};
-
-export const WithHint: Story = {
-  args: {
-    hint: "Accepted formats: PDF, JPG, PNG",
-  },
-};
-
-export const Required: Story = {
-  args: {
-    required: true,
-  },
-};
-
-export const ErrorState: Story = {
-  args: {
-    error: "File is required.",
-    required: true,
-  },
-};

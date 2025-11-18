@@ -7,6 +7,17 @@ const meta: Meta<typeof CountrySelect> = {
   args: {
     fullWidth: true,
   },
+  parameters: {
+    controls: { expanded: true },
+  },
+  argTypes: {
+    required: { control: "boolean" },
+    requiredMark: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    hint: { control: "text" },
+    error: { control: "text" },
+    autoComplete: { control: "text" },
+  },
 };
 
 export default meta;

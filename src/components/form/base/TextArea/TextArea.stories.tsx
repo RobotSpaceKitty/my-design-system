@@ -7,38 +7,28 @@ const meta: Meta<typeof TextArea> = {
   component: TextArea,
   args: {
     label: "Message",
-    placeholder: "Type your message here...",
-    hint: "You can resize this field vertically.",
+    placeholder: "Type here…",
     rows: 4,
+    fullWidth: true,
+  },
+  parameters: { controls: { expanded: true } },
+  argTypes: {
+    label: { control: "text" },
+    placeholder: { control: "text" },
+    rows: { control: "number" },
+    required: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    hint: { control: "text" },
+    error: { control: "text" },
   },
 };
-export default meta;
 
+export default meta;
 type Story = StoryObj<typeof TextArea>;
 
 export const Default: Story = {
   render: (args) => {
     const [value, setValue] = useState("");
-    return (
-      <TextArea
-        {...args}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      />
-    );
-  },
-};
-
-export const WithError: Story = {
-  render: (args) => {
-    const [value, setValue] = useState("");
-    return (
-      <TextArea
-        {...args}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-        error={!value ? "Message cannot be empty." : ""}
-      />
-    );
+    return <TextArea {...args} value={value} onChange={(e) => setValue(e.target.value)} />;
   },
 };

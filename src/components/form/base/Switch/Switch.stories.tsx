@@ -1,42 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Switch } from "./Switch";
-import { useState } from "react";
 
 const meta: Meta<typeof Switch> = {
   title: "DesignSystem/Form/Base/Switch",
   component: Switch,
   args: {
-    label: "Enable notifications",
-    hint: "Toggle to receive alerts.",
+    label: "Enable feature",
+    checked: false,
+    fullWidth: true,
+  },
+  parameters: { controls: { expanded: true } },
+  argTypes: {
+    label: { control: "text" },
+    checked: { control: "boolean" },
+    required: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    hint: { control: "text" },
+    error: { control: "text" },
   },
 };
-export default meta;
 
+export default meta;
 type Story = StoryObj<typeof Switch>;
 
-export const Default: Story = {
-  render: (args) => {
-    const [checked, setChecked] = useState(false);
-    return (
-      <Switch
-        {...args}
-        checked={checked}
-        onChange={(e) => setChecked(e.target.checked)}
-      />
-    );
-  },
-};
-
-export const Error: Story = {
-  render: (args) => {
-    const [checked, setChecked] = useState(true);
-    return (
-      <Switch
-        {...args}
-        checked={checked}
-        onChange={(e) => setChecked(e.target.checked)}
-        error="This setting cannot be disabled."
-      />
-    );
-  },
-};
+export const Default: Story = {};

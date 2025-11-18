@@ -1,35 +1,29 @@
-import type {Meta, StoryObj} from "@storybook/react";
-import {Checkbox} from "./Checkbox";
+import type { Meta, StoryObj } from "@storybook/react";
+import { Checkbox } from "./Checkbox";
 
 const meta: Meta<typeof Checkbox> = {
-    title: "DesignSystem/Form/Base/Checkbox",
-    component: Checkbox,
-    args: {
-        label: "I agree to the terms",
-    },
+  title: "DesignSystem/Form/Base/Checkbox",
+  component: Checkbox,
+  args: {
+    label: "Accept terms",
+    checked: false,
+    fullWidth: true,
+  },
+  parameters: {
+    controls: { expanded: true },
+  },
+  argTypes: {
+    label: { control: "text" },
+    checked: { control: "boolean" },
+    required: { control: "boolean" },
+    requiredMark: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    hint: { control: "text" },
+    error: { control: "text" },
+  },
 };
 
 export default meta;
-
 type Story = StoryObj<typeof Checkbox>;
 
 export const Default: Story = {};
-
-export const WithHint: Story = {
-    args: {
-        hint: "You must accept before continuing."
-    },
-};
-
-export const Required: Story = {
-    args: {
-        required: true,
-    },
-};
-
-export const Error: Story = {
-    args: {
-        required: true,
-        error: "You must agree before submitting.",
-    },
-};

@@ -2,42 +2,30 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Select } from "./Select";
 
 const meta: Meta<typeof Select> = {
-  title: "DesignSystem/Form/Base/Select",   // still your parent grouping
+  title: "DesignSystem/Form/Base/Select",
   component: Select,
-
-  // Generic default props (NOT country-specific)
   args: {
     label: "Select an option",
-    options: [
-      { value: "option1", label: "Option One" },
-      { value: "option2", label: "Option Two" },
-      { value: "option3", label: "Option Three" },
-    ],
     fullWidth: true,
+    options: [
+      { value: "1", label: "Option One" },
+      { value: "2", label: "Option Two" },
+      { value: "3", label: "Option Three" },
+    ],
+  },
+  parameters: { controls: { expanded: true } },
+  argTypes: {
+    label: { control: "text" },
+    options: { control: "object" },
+    required: { control: "boolean" },
+    requiredMark: { control: "boolean" },
+    fullWidth: { control: "boolean" },
+    hint: { control: "text" },
+    error: { control: "text" },
   },
 };
 
 export default meta;
-
 type Story = StoryObj<typeof Select>;
 
 export const Default: Story = {};
-
-export const WithHint: Story = {
-  args: {
-    hint: "Choose any value from the list.",
-  },
-};
-
-export const Required: Story = {
-  args: {
-    required: true,
-  },
-};
-
-export const Error: Story = {
-  args: {
-    required: true,
-    error: "A selection is required.",
-  },
-};
